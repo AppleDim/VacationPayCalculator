@@ -46,31 +46,19 @@ public class PayCalculatorService {
     }
 
     private List<LocalDate> getHolidays() {
-        //Valid dates for 2023 (weekends included)
+        //Valid dates for 2023 (weekends excluded)
         return Stream.of(
-                LocalDate.of(CURRENT_YEAR, 1, 1),
                 LocalDate.of(CURRENT_YEAR, 1, 2),
                 LocalDate.of(CURRENT_YEAR, 1, 3),
                 LocalDate.of(CURRENT_YEAR, 1, 4),
                 LocalDate.of(CURRENT_YEAR, 1, 5),
                 LocalDate.of(CURRENT_YEAR, 1, 6),
-                LocalDate.of(CURRENT_YEAR, 1, 7),
-                LocalDate.of(CURRENT_YEAR, 1, 8),
                 LocalDate.of(CURRENT_YEAR, 2, 23),
                 LocalDate.of(CURRENT_YEAR, 2, 24),
-                LocalDate.of(CURRENT_YEAR, 2, 25),
-                LocalDate.of(CURRENT_YEAR, 2, 26),
-                LocalDate.of(CURRENT_YEAR, 4, 29),
-                LocalDate.of(CURRENT_YEAR, 4, 30),
                 LocalDate.of(CURRENT_YEAR, 5, 1),
-                LocalDate.of(CURRENT_YEAR, 5, 6),
-                LocalDate.of(CURRENT_YEAR, 5, 7),
                 LocalDate.of(CURRENT_YEAR, 5, 8),
-                LocalDate.of(CURRENT_YEAR, 6, 10),
-                LocalDate.of(CURRENT_YEAR, 6, 11),
+                LocalDate.of(CURRENT_YEAR, 5, 9),
                 LocalDate.of(CURRENT_YEAR, 6, 12),
-                LocalDate.of(CURRENT_YEAR, 11, 4),
-                LocalDate.of(CURRENT_YEAR, 11, 5),
                 LocalDate.of(CURRENT_YEAR, 11, 6)
         ).toList();
     }
