@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Vacation pay calculator</h1>
+<form action="/calculated-result" method="post" th:object="${vacationData}">
+    <label for="averageAnnualSalary">Average annual salary:</label>
+    <input type="number" id="averageAnnualSalary" name="averageAnnualSalary" required th:field="*{averageAnnualSalary}" min="0" step="0.01"/><br><br>
+    <label for="vacationDays">Vacation Days:</label>
+    <input type="number" id="vacationDays" name="vacationDays" required th:field="*{vacationDays}" min="0" ><br><br>
+    <label for="startVacationDate">Start Vacation Date:</label>
+    <input type="date" id="startVacationDate" name="startVacationDate"
+           min="2023-01-01" max="2023-12-31" th:field="*{startVacationDate}"><br><br>
+    <button type="submit">Calculate</button>
+</form>
+</body>
+</html>
